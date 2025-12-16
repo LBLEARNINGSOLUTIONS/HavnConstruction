@@ -1,17 +1,17 @@
 <template>
-  <div class="lesson-container">
-    <!-- Header with Logo -->
-    <header class="lesson-header">
+  <div class="ira-lesson">
+    <!-- Header -->
+    <div class="lesson-header">
       <div class="logo-mark">
         <svg viewBox="0 0 40 40" class="house-icon">
           <path d="M20 4L4 18h5v14h22V18h5L20 4zm-6 26V22h12v8H14z" fill="currentColor"/>
         </svg>
       </div>
       <h1 class="lesson-title">How to Fill Out an IRA with a Homeowner</h1>
-    </header>
+    </div>
 
     <!-- Video Section -->
-    <section class="video-section">
+    <div class="video-section">
       <div class="video-wrapper">
         <iframe
           src="https://www.youtube.com/embed/KeiSbmSu6QI"
@@ -21,10 +21,10 @@
           allowfullscreen
         ></iframe>
       </div>
-    </section>
+    </div>
 
     <!-- The Big Picture -->
-    <section class="content-section">
+    <div class="content-section">
       <h2 class="section-heading">The Big Picture</h2>
       <div class="card-grid">
         <div class="info-card">
@@ -65,10 +65,10 @@
           </p>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- Watch Out -->
-    <section class="content-section warning-section">
+    <div class="content-section warning-section">
       <h2 class="section-heading">Watch Out</h2>
       <p class="section-subtext">Common mistakes that cost deals and cause delays:</p>
       <ul class="warning-list">
@@ -89,10 +89,10 @@
           <span>Filling it out before a claim has been filed (in most cases, it's smoother to do during/after)</span>
         </li>
       </ul>
-    </section>
+    </div>
 
     <!-- Your Toolkit -->
-    <section class="content-section">
+    <div class="content-section">
       <h2 class="section-heading">Your Toolkit</h2>
       <p class="section-subtext">Have these ready before you start:</p>
       <ul class="toolkit-list">
@@ -113,10 +113,10 @@
           <span>Homeowner's insurance info</span>
         </li>
       </ul>
-    </section>
+    </div>
 
     <!-- Practice It -->
-    <section class="content-section">
+    <div class="content-section">
       <h2 class="section-heading">Practice It</h2>
       <div class="practice-grid">
         <div class="practice-card solo">
@@ -140,66 +140,25 @@
           </ol>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- Completion Button -->
-    <section class="completion-section">
+    <div class="completion-section">
       <button 
         class="completion-button" 
-        @click="markComplete"
+        :class="{ completed: isCompleted }"
+        @click="complete"
         :disabled="isCompleted"
       >
         <span v-if="!isCompleted">I've Reviewed This Lesson</span>
         <span v-else>✓ Completed</span>
       </button>
-    </section>
+    </div>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'IraLessonComponent',
-
-  props: {
-    ctx: {
-      type: Object,
-      required: true
-    }
-  },
-
-  data() {
-    return {
-      isCompleted: false
-    };
-  },
-
-  computed: {
-    learnerName() {
-      return this.ctx?.learner?.first_name || 'there';
-    }
-  },
-
-  methods: {
-    markComplete() {
-      if (this.isCompleted) return;
-      this.isCompleted = true;
-      this.$emit('completed');
-    }
-  }
-};
-</script>
-
 <style scoped>
-/* CSS Variables for HAVN Brand */
-:root {
-  --havn-orange: #F5A623;
-  --havn-orange-dark: #E8940F;
-  --havn-purple: #5B2D86;
-  --havn-purple-light: #7B4BA6;
-}
-
-/* Base Container */
-.lesson-container {
+.ira-lesson {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
   max-width: 800px;
   margin: 0 auto;
@@ -381,11 +340,10 @@ export default {
 /* Toolkit Section */
 .toolkit-list {
   list-style: none;
-  padding: 0;
+  padding: 16px 24px;
   margin: 0;
   background: #fff;
   border-radius: 12px;
-  padding: 16px 24px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
@@ -498,7 +456,7 @@ export default {
   transform: translateY(0);
 }
 
-.completion-button:disabled {
+.completion-button.completed {
   background: linear-gradient(135deg, #F5A623 0%, #E8940F 100%);
   cursor: default;
   box-shadow: 0 4px 15px rgba(245, 166, 35, 0.3);
@@ -506,7 +464,7 @@ export default {
 
 /* Mobile Responsive */
 @media (max-width: 600px) {
-  .lesson-container {
+  .ira-lesson {
     padding: 16px;
   }
 
@@ -534,3 +492,42 @@ export default {
   }
 }
 </style>
+
+<script lang='es6'>
+module.exports = {
+  name: 'IraHomeownerLesson',
+
+  props: ['ctx', 'ui', 'api'],
+
+  data() {
+    return {
+      isCompleted: false
+    };
+  },
+
+  beforeMount() {
+    this.$options.components = this.ui;
+  },
+
+  computed: {
+    learner() {
+      return this.ctx?.learner || {};
+    },
+    learnerName() {
+      return this.learner.first_name || 'there';
+    }
+  },
+
+  methods: {
+    complete() {
+      if (this.isCompleted) return;
+      this.isCompleted = true;
+      this.$emit('completed');
+    }
+  },
+
+  mounted() {
+    this.$emit('loaded');
+  }
+};
+</script>
