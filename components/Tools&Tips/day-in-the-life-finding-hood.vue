@@ -1,0 +1,617 @@
+<template>
+  <div class="ira-lesson">
+    <!-- Header -->
+    <div class="lesson-header">
+      <div class="logo-mark">
+        <svg viewBox="0 0 40 40" class="house-icon">
+          <path d="M20 4L4 18h5v14h22V18h5L20 4zm-6 26V22h12v8H14z" fill="currentColor"/>
+        </svg>
+      </div>
+      <h1 class="lesson-title">Day in the Life - Finding Hood</h1>
+    </div>
+
+    <!-- Video Section -->
+    <div class="video-section">
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/8Vzs5cxeAX0"
+          title="Day in the Life - Finding Hood"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+
+    <!-- The Big Picture -->
+    <div class="content-section">
+      <h2 class="section-heading">The Big Picture</h2>
+      <div class="card-grid">
+        <div class="info-card">
+          <div class="card-icon what-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+          </div>
+          <h3 class="card-title">What It Is</h3>
+          <p class="card-text">
+            This process is about identifying the best neighborhoods to target before you go knocking doors. Using tools like Zillow and visual cues from the neighborhood, you can focus your time where roofs are most likely to be old, damaged, and ready for replacement.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <div class="card-icon why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <h3 class="card-title">Why It Matters</h3>
+          <p class="card-text">
+            Not all neighborhoods are created equal. If you're randomly knocking, you waste time on homes that don't need work or have already been replaced. Targeting the right neighborhoods ensures more conversations with qualified homeowners, higher close rates, and more deals in less time.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <div class="card-icon how-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+            </svg>
+          </div>
+          <h3 class="card-title">How It Fits</h3>
+          <p class="card-text">
+            This is part of your daily preparation before prime-time knocking. By scouting and marking neighborhoods in advance, you maximize the quality of your 4–8 p.m. knocking window and avoid wasting time on the wrong doors.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Watch Out -->
+    <div class="content-section warning-section">
+      <h2 class="section-heading">Watch Out</h2>
+      <p class="section-subtext">Common mistakes that waste time and cost deals:</p>
+      <ul class="warning-list">
+        <li class="warning-item">
+          <span class="warning-icon">✕</span>
+          <span>Choosing neighborhoods with homes that are too new (under 15 years old)</span>
+        </li>
+        <li class="warning-item">
+          <span class="warning-icon">✕</span>
+          <span>Targeting only very old homes (65+ years) without checking roof condition</span>
+        </li>
+        <li class="warning-item">
+          <span class="warning-icon">✕</span>
+          <span>Forgetting to use Zillow filters to narrow by build year</span>
+        </li>
+        <li class="warning-item">
+          <span class="warning-icon">✕</span>
+          <span>Overlooking simple visual cues like tree size and neighborhood maturity</span>
+        </li>
+        <li class="warning-item">
+          <span class="warning-icon">✕</span>
+          <span>Not accounting for hail swaths when selecting target areas</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Your Toolkit -->
+    <div class="content-section">
+      <h2 class="section-heading">Your Toolkit</h2>
+      <p class="section-subtext">Have these ready before you start:</p>
+      <ul class="toolkit-list">
+        <li class="toolkit-item">
+          <span class="check-icon">✓</span>
+          <span>Zillow app or website (filter: "Recently Sold")</span>
+        </li>
+        <li class="toolkit-item">
+          <span class="check-icon">✓</span>
+          <span>Build year filter set to ~1995–2006 (20–30 years old)</span>
+        </li>
+        <li class="toolkit-item">
+          <span class="check-icon">✓</span>
+          <span>Phone with map pins to mark neighborhoods</span>
+        </li>
+        <li class="toolkit-item">
+          <span class="check-icon">✓</span>
+          <span>Vehicle for scouting and photos</span>
+        </li>
+        <li class="toolkit-item">
+          <span class="check-icon">✓</span>
+          <span>Awareness of local hail maps</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Example Scripts -->
+    <div class="content-section">
+      <h2 class="section-heading">Example Scripts</h2>
+      <p class="section-subtext">Use these phrases when explaining your approach:</p>
+      <div class="scripts-list">
+        <div class="script-item">
+          <span class="script-icon">💬</span>
+          <p class="script-text">"I look for homes built 20–30 years ago — that's the sweet spot for roof replacement."</p>
+        </div>
+        <div class="script-item">
+          <span class="script-icon">💬</span>
+          <p class="script-text">"Big mature trees usually mean older neighborhoods with more roof opportunities."</p>
+        </div>
+        <div class="script-item">
+          <span class="script-icon">💬</span>
+          <p class="script-text">"If it's hail damage, I go straight to the swath — wherever the hail hit, that's where I knock."</p>
+        </div>
+        <div class="script-item">
+          <span class="script-icon">💬</span>
+          <p class="script-text">"I always scout my hood on Zillow first so I'm not wasting time on brand-new roofs."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Practice It -->
+    <div class="content-section">
+      <h2 class="section-heading">Practice It</h2>
+      <div class="practice-grid">
+        <div class="practice-card solo">
+          <div class="practice-header">
+            <span class="practice-emoji">👤</span>
+            <h3 class="practice-title">Solo Practice</h3>
+          </div>
+          <ol class="practice-list">
+            <li>Open Zillow and set filters: Recently Sold → Houses → Year Built 1995–2006.</li>
+            <li>Drop map pins on at least 3 promising neighborhoods to scout later.</li>
+            <li>Drive through one area and note visible signs of aging roofs.</li>
+          </ol>
+        </div>
+
+        <div class="practice-card peer">
+          <div class="practice-header">
+            <span class="practice-emoji">👥</span>
+            <h3 class="practice-title">Peer Practice</h3>
+          </div>
+          <ol class="practice-list">
+            <li>Compare your Zillow neighborhoods with a teammate's — discuss which ones look more promising and why.</li>
+            <li>Roleplay explaining your "neighborhood selection strategy" to a new rep.</li>
+            <li>Quiz each other on visual cues: small trees vs. big trees, old roofs vs. new.</li>
+          </ol>
+        </div>
+
+        <div class="practice-card field">
+          <div class="practice-header">
+            <span class="practice-emoji">🏡</span>
+            <h3 class="practice-title">In the Field</h3>
+          </div>
+          <ol class="practice-list">
+            <li>Spend one afternoon scouting 2–3 neighborhoods you identified on Zillow.</li>
+            <li>Mark specific streets with multiple homes showing visible roof damage.</li>
+            <li>Knock those same neighborhoods during 4–8 p.m. and track how many quality conversations you have compared to random knocking.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <!-- Completion Button -->
+    <div class="completion-section">
+      <button 
+        class="completion-button" 
+        :class="{ completed: isCompleted }"
+        @click="complete"
+        :disabled="isCompleted"
+      >
+        <span v-if="!isCompleted">I've Reviewed This Lesson</span>
+        <span v-else>✓ Completed</span>
+      </button>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+.ira-lesson {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+.lesson-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.logo-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  color: #F5A623;
+  margin-bottom: 12px;
+}
+
+.house-icon {
+  width: 100%;
+  height: 100%;
+}
+
+.lesson-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #5B2D86;
+  margin: 0;
+}
+
+/* Video Section */
+.video-section {
+  margin-bottom: 40px;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(91, 45, 134, 0.15);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Section Styles */
+.content-section {
+  margin-bottom: 40px;
+}
+
+.section-heading {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #5B2D86;
+  margin: 0 0 8px 0;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #F5A623;
+  display: inline-block;
+}
+
+.section-subtext {
+  color: #666;
+  margin: 0 0 16px 0;
+  font-size: 0.95rem;
+}
+
+/* Info Cards Grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.info-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  border-top: 4px solid #F5A623;
+}
+
+.card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.card-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.what-icon {
+  background: rgba(245, 166, 35, 0.15);
+  color: #F5A623;
+}
+
+.why-icon {
+  background: rgba(91, 45, 134, 0.1);
+  color: #5B2D86;
+}
+
+.how-icon {
+  background: rgba(245, 166, 35, 0.15);
+  color: #E8940F;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #5B2D86;
+  margin: 0 0 8px 0;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0;
+}
+
+/* Warning Section */
+.warning-section {
+  background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+  padding: 24px;
+  border-radius: 12px;
+  border-left: 4px solid #e53935;
+}
+
+.warning-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.warning-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.warning-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.warning-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: #e53935;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+/* Toolkit Section */
+.toolkit-list {
+  list-style: none;
+  padding: 16px 24px;
+  margin: 0;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.toolkit-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.toolkit-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.check-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: #F5A623;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+/* Scripts Section */
+.scripts-list {
+  background: #fff;
+  border-radius: 12px;
+  padding: 8px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.script-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.script-item:last-child {
+  border-bottom: none;
+}
+
+.script-icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.script-text {
+  margin: 0;
+  font-style: italic;
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Practice Section */
+.practice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.practice-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.practice-card.solo {
+  border-top: 4px solid #F5A623;
+}
+
+.practice-card.peer {
+  border-top: 4px solid #5B2D86;
+}
+
+.practice-card.field {
+  border-top: 4px solid #2E7D32;
+}
+
+.practice-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.practice-emoji {
+  font-size: 1.5rem;
+}
+
+.practice-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #5B2D86;
+  margin: 0;
+}
+
+.practice-list {
+  margin: 0;
+  padding-left: 20px;
+  color: #555;
+}
+
+.practice-list li {
+  margin-bottom: 12px;
+}
+
+.practice-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Completion Section */
+.completion-section {
+  text-align: center;
+  padding: 32px 0 16px;
+}
+
+.completion-button {
+  background: linear-gradient(135deg, #5B2D86 0%, #7B4BA6 100%);
+  color: #fff;
+  border: none;
+  padding: 16px 48px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(91, 45, 134, 0.3);
+}
+
+.completion-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(91, 45, 134, 0.4);
+}
+
+.completion-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.completion-button.completed {
+  background: linear-gradient(135deg, #F5A623 0%, #E8940F 100%);
+  cursor: default;
+  box-shadow: 0 4px 15px rgba(245, 166, 35, 0.3);
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .ira-lesson {
+    padding: 16px;
+  }
+
+  .lesson-title {
+    font-size: 1.4rem;
+  }
+
+  .section-heading {
+    font-size: 1.2rem;
+  }
+
+  .card-grid,
+  .practice-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-card,
+  .practice-card {
+    padding: 20px;
+  }
+
+  .completion-button {
+    width: 100%;
+    padding: 16px 24px;
+  }
+}
+</style>
+
+<script lang='es6'>
+module.exports = {
+  name: 'FindingHoodLesson',
+
+  props: ['ctx', 'ui', 'api'],
+
+  data() {
+    return {
+      isCompleted: false
+    };
+  },
+
+  beforeMount() {
+    this.$options.components = this.ui;
+  },
+
+  computed: {
+    learner() {
+      return this.ctx?.learner || {};
+    },
+    learnerName() {
+      return this.learner.first_name || 'there';
+    }
+  },
+
+  methods: {
+    complete() {
+      if (this.isCompleted) return;
+      this.isCompleted = true;
+      this.$emit('completed');
+    }
+  },
+
+  mounted() {
+    this.$emit('loaded');
+  }
+};
+</script>
